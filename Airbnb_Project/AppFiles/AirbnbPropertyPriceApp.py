@@ -29,7 +29,7 @@ x_lists = {'property_type': ['Apartment', 'Condominium', 'House', 'Loft',
            }
 
 # Separando o modelo
-zp = ZipFile('model.zip.zip', mode='r')
+zp = ZipFile('model.zip', mode='r')
 model = zp.extractall()
 
 
