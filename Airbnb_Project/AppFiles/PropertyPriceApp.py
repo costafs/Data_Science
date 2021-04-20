@@ -30,7 +30,7 @@ x_lists = {'property_type': ['Apartment', 'Condominium', 'House', 'Loft',
 
 # Separando o modelo
 zp = zipfile.ZipFile(os.path.join('Airbnb_Project/AppFiles/model.zip'), mode='r')
-model = zp.extractall()
+model = zp.read('model_airbnb.pkl')
 
 
 # In[3]:
@@ -69,7 +69,7 @@ if botao:
   dict_.update(x_numeric)
   dict_.update(x_boolean)
   x_values = pd.DataFrame(dict_, index=[0])
-  modelo = pickle.load(open(model,mode='rb'))
+  modelo = pickle.load(model)
   preco = modelo.predict(x_values)
   st.write(preco[0])
 
