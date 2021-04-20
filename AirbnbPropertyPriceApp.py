@@ -8,7 +8,7 @@ import pandas as pd
 import streamlit as st
 import pickle
 import zipfile
-
+import os
 
 # In[2]:
 
@@ -29,7 +29,7 @@ x_lists = {'property_type': ['Apartment', 'Condominium', 'House', 'Loft',
            }
 
 # Separando o modelo
-zp = zipfile.ZipFile('model.zip', mode='r')
+zp = zipfile.ZipFile(os.path.join('Airbnb_Project/AppFiles/model.zip'), mode='r')
 model = zp.extractall()
 
 
