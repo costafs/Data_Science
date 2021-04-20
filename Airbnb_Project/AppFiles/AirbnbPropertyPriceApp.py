@@ -7,7 +7,7 @@
 import pandas as pd
 import streamlit as st
 import pickle
-from zipfile import ZipFile
+import zipfile
 
 
 # In[2]:
@@ -29,7 +29,7 @@ x_lists = {'property_type': ['Apartment', 'Condominium', 'House', 'Loft',
            }
 
 # Separando o modelo
-zp = ZipFile('model.zip', mode='r')
+zp = zipfile.ZipFile('model.zip', mode='r')
 model = zp.extractall()
 
 
